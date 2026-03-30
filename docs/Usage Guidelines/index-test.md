@@ -181,10 +181,10 @@ end
 ### 小图片
 
 <!-- ![](../../assets/images/small-image.jpg) -->
-![](https://raw.githubusercontent.com/XiaoWendell/WendellManual/master/assets/images/small-image.jpg)
+![](https://raw.githubusercontent.com/yen-chiu/WendellManual/master/assets/images/small-image.jpg)
 
 ### 大图片
-![](https://raw.githubusercontent.com/XiaoWendell/WendellManual/master/assets/images/large-image.jpg)
+![](https://raw.githubusercontent.com/yen-chiu/WendellManual/master/assets/images/large-image.jpg)
 <!-- ![](../../assets/images/large-image.jpg) -->
 
 "[弗罗茨瓦夫大学图书馆数字化稀有档案文本](https://www.flickr.com/photos/97810305@N08/9401451269)" by [j_cadmus](https://www.flickr.com/photos/97810305@N08) is marked with [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/?ref=openverse).
