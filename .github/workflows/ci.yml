@@ -64,13 +64,13 @@ jobs:
           ruby-version: "3.2"
           bundler-cache: true  # 启用缓存
 
-      # 构建 Jekyll 网站
+      # 构建 Jekyll 网站（不带 baseurl，让站内链接是根路径）
       - name: Build Site
-        run: bundle exec jekyll build
+        run: bundle exec jekyll build --baseurl ""
 
-      # 使用 html-proofer 进行链接和 HTML 验证
+      # 只校验站内链接与 HTML 结构；外链关掉，避免第三方站点波动导致误报
       - name: Test with html-proofer
-        run: bundle exec htmlproofer _site --ignore-urls "/github.com/,/web.archive.org/"
+        run: bundle exec htmlproofer _site --disable-external --ignore-urls "/github.com/,/web.archive.org/"
         env:
           NOKOGIRI_USE_SYSTEM_LIBRARIES: true
 
