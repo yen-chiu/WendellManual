@@ -5,8 +5,8 @@
 
 title: WendellManual
 description: Wendell's Manual
-baseurl: "" # 由 deploy.yml 的 --baseurl "${{ steps.pages.outputs.base_path }}" 覆盖
-url: "https://yen-chiu.github.io" # GitHub Pages 项目站点（换自定义域名时改这里）
+baseurl: "/WendellManual" # 项目站点的子路径；换成独立域名时改成 ""
+url: "https://yenchiu.com" # 站点实际所在域（博客主域）
 repository: yen-chiu/WendellManual # 用于 github-metadata
 
 permalink: pretty
