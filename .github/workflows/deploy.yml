@@ -1,62 +1,62 @@
-# 此工作流程使用未经 GitHub 认证的操作。
-# 它们由第三方提供，并受
-# 单独的服务条款、隐私政策和支持
-# 文档的约束。
-
-# 用于构建和将 Jekyll 站点部署到 GitHub Pages 的示例工作流程
+# 构建并部署 WendellManual 到 GitHub Pages
+# ---------------------------------------------------------------------------
+# 说明：
+#   - 用 Actions 构建（而不是 Pages 的 legacy 构建），这样可以自由使用
+#     Gemfile 里的任意 Jekyll 版本与插件
+#   - baseurl 由 configure-pages 输出的 base_path 决定：
+#       项目站点   → /WendellManual
+#       自定义域名 → 空
+#     所以换域名时不用改这个文件
+# ---------------------------------------------------------------------------
 name: Deploy Jekyll site to Pages
 
 on:
   push:
     branches: ["master"]
-    
-  # 允许恁从操作选项卡手动运行此工作流程
   workflow_dispatch:
 
-# 设置 GITHUB_TOKEN 的权限以允许部署到 GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# 允许一个并发部署
 concurrency:
   group: "pages"
   cancel-in-progress: true
 
 jobs:
-  # Build job
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.2"
-          bundler-cache: true # 自动运行 'bundle install' 并缓存已安装的 gems
-          cache-version: 0 # 如果需要重新下载缓存的 gems，请增加此数字
+          ruby-version: "3.3"
+          bundler-cache: true
+          cache-version: 1
+
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v3
+        uses: actions/configure-pages@v5
+
       - name: Build with Jekyll
-        # 默认输出到 './_site' 目录
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
-      - name: Upload artifact
-        # 默认自动从 './_site' 目录上传工件
-        uses: actions/upload-pages-artifact@v2
 
-  # 部署作业
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+
   deploy:
+    needs: build
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
