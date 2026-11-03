@@ -14,5 +14,5 @@ has_children: true
 
 这两条错一条，文章就不会出现在站点上，而且**不会有任何报错**。
 
-- [Front Matter 字段](/WendellManual/docs/blog-guide/rules/front-matter/)
-- [标点与预检查](/WendellManual/docs/blog-guide/rules/punctuation/)
+- [Front Matter 字段](front-matter/)
+- [标点与预检查](punctuation/)

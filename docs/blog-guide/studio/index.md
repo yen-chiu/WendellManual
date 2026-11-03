@@ -23,6 +23,6 @@ has_children: true
 
 三件事单独说：
 
-- [登录与授权](/WendellManual/docs/blog-guide/studio/login/)：令牌从哪来、多久过期
-- [写一篇文章](/WendellManual/docs/blog-guide/studio/write/)：从新建到保存
-- [图片与附件](/WendellManual/docs/blog-guide/studio/images/)：拖图、压缩、大文件怎么办
+- [登录与授权](login/)：令牌从哪来、多久过期
+- [写一篇文章](write/)：从新建到保存
+- [图片与附件](images/)：拖图、压缩、大文件怎么办
