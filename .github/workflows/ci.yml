@@ -58,10 +58,12 @@ jobs:
       - uses: actions/checkout@v4
 
       # 设置 Ruby 环境
-      - name: Setup Ruby "3.2"
+      # 跟随 .ruby-version（3.3.13）：Gemfile.lock 里 listen → async / console /
+      # io-event 已经要求 Ruby >= 3.3，用 3.2 会在 bundle install 阶段直接失败。
+      # 这也保证 CI 与部署用的是同一个 Ruby。
+      - name: Setup Ruby (.ruby-version)
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.2"
           bundler-cache: true  # 启用缓存
 
       # 构建 Jekyll 网站（不带 baseurl，让站内链接是根路径）
