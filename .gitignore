@@ -14,6 +14,11 @@ _site/
 .bundle/
 vendor/
 
+# 注意：Gemfile.lock 是**提交**的（这里不忽略）。
+# 但本机是 Windows，生成的 lock 必须补上 x86_64-linux 平台，
+# 否则 ubuntu 上的 Actions 会报 platform 不匹配：
+#   bundle lock --add-platform x86_64-linux
+
 # 以下文件是 Just the Docs 开发人员使用的。它们对主题的最终用户来说不是必需的，仅对开发人员有用。
 
 # 我们使用 Stylelint 和 Prettier 这两个 JavaScript 工具来检查和格式化我们自己的代码。
@@ -27,4 +32,5 @@ node_modules
 # 这些是通常针对 Ruby 主题开发人员的遗留模式。我们可能会在以后更改这些。
 *.gem
 .bundle
-.ruby-version
+# 注意：.ruby-version **不忽略**。这个仓库是站点而不是主题，
+# CI 的 ruby/setup-ruby 会读 .ruby-version 决定用哪个 Ruby。

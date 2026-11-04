@@ -27,6 +27,10 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    # Gemfile.lock 已提交，bundler 一律走 frozen：Gemfile 改了却忘记更新 lock，
+    # 这里会直接失败，而不是悄悄解出新版本。
+    env:
+      BUNDLE_FROZEN: "true"
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -34,7 +38,7 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.3"
+          # 版本写在 .ruby-version，避免在这里和维护处写两份
           bundler-cache: true
           cache-version: 1
 

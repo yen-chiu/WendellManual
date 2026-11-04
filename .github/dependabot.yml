@@ -1,14 +1,47 @@
+# 依赖升级由 Dependabot 提 PR 完成，避免 Gemfile.lock 冻结成"不敢动的石头"。
+# - bundler：每周一次；Jekyll / sass-embedded / just-the-docs 的主版本不自动升，
+#   因为它们跨大版本时最可能改掉主题和构建链的行为，需要人工判断。
+# - npm：这个仓库只用来跑 stylelint / prettier，降到每周一次减少噪音。
+# - github-actions：每月一次。
 version: 2
 updates:
-- package-ecosystem: npm
-  directory: "/"
-  schedule:
-    interval: daily
-    time: "10:00"
-  open-pull-requests-limit: 10
-- package-ecosystem: bundler
-  directory: "/"
-  schedule:
-    interval: daily
-    time: "10:00"
-  open-pull-requests-limit: 10
+  - package-ecosystem: "bundler"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Asia/Shanghai"
+    open-pull-requests-limit: 5
+    labels:
+      - "dependencies"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+    ignore:
+      - dependency-name: "jekyll"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "sass-embedded"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "just-the-docs"
+        update-types: ["version-update:semver-major"]
+
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Asia/Shanghai"
+    open-pull-requests-limit: 3
+    labels:
+      - "dependencies"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    open-pull-requests-limit: 3
+    labels:
+      - "dependencies"
+      - "ci"
