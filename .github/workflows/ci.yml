@@ -20,7 +20,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       # 检出代码
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       # 设置 Ruby 环境
       - name: Setup Ruby ${{ matrix.ruby-version }}
@@ -55,7 +55,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       # 检出代码
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       # 设置 Ruby 环境
       # 跟随 .ruby-version（3.3.13）：Gemfile.lock 里 listen → async / console /
@@ -85,7 +85,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       # 检出代码
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       # 设置 Node.js 环境
       - name: Use Node.js ${{ matrix.node-version }}
