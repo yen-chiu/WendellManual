@@ -17,5 +17,5 @@ gem "csv"
 gem "base64"
 gem "faraday-retry"
 gem "wdm", ">= 0.1.0", platforms: [:mswin, :mingw, :x64_mingw]
-gem "zeitwerk", "~> 2.7.1"
+gem "zeitwerk", "~> 2.8.3"
 gem "sass-embedded", "< 1.82.0"
