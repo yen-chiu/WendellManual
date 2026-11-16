@@ -12,3 +12,6 @@ nav_order: 8
 - [执行与备份](./execution)
 - [验证结果](./validation)
 - [待处理问题](./issues)
+
+- [公开预览与架构设计审查](./public-review)
+
