@@ -31,3 +31,7 @@ nav_order: 8
 - [透明月牙网站图标与分享缩略图](./site-icon)
 - [玻璃导航、外观面板与手机交互修复](./appearance-navigation)
 
+
+- [全屏首页、文章日历与链接页](./home-archive-links)
+
+- [用户指定的透明人物网站图标](./supplied-site-icon)
