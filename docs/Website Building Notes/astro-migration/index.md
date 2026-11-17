@@ -21,3 +21,6 @@ nav_order: 8
 
 - [手机图谱可读性与五项验收续记](./mobile-graph)
 
+
+- [浏览器恢复后发现的搜索路径回归](./search-path-regression)
+
