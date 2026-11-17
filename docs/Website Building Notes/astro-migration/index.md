@@ -29,4 +29,5 @@ nav_order: 8
 - [手机菜单、图谱与页脚修复](./mobile-controls)
 - [关于页完整移植与排版优化](./about-page)
 - [透明月牙网站图标与分享缩略图](./site-icon)
+- [玻璃导航、外观面板与手机交互修复](./appearance-navigation)
 
