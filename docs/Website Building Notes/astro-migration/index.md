@@ -18,3 +18,6 @@ nav_order: 8
 
 - [所选十项执行与验收](./selected-batch)
 
+
+- [手机图谱可读性与五项验收续记](./mobile-graph)
+
