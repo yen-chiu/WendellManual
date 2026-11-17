@@ -15,3 +15,6 @@ nav_order: 8
 
 - [公开预览与架构设计审查](./public-review)
 
+
+- [所选十项执行与验收](./selected-batch)
+
