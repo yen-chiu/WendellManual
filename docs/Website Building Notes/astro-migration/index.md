@@ -24,3 +24,6 @@ nav_order: 8
 
 - [浏览器恢复后发现的搜索路径回归](./search-path-regression)
 
+
+- [Chrome 真实交互验收](./chrome-qa)
+
