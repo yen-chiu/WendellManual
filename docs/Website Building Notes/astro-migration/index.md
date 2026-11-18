@@ -35,3 +35,9 @@ nav_order: 8
 - [全屏首页、文章日历与链接页](./home-archive-links)
 
 - [用户指定的透明人物网站图标](./supplied-site-icon)
+
+- [文章卡片底栏与背景设置分离](./cards-background-settings)
+
+- [手机界面信息密度与图谱交互优化](./mobile-ui-density)
+
+- [项目页作品展示与补充链接](./projects-portfolio)
