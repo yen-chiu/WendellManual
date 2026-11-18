@@ -43,3 +43,5 @@ nav_order: 8
 - [项目页作品展示与补充链接](./projects-portfolio)
 
 - [搜索面板与首页弹簧动效](./search-and-home-motion)
+
+- [文档站红叉与站内链接修复](./manual-ci-links)
