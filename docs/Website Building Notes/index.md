@@ -167,3 +167,7 @@ fetch('/path-to-index.json')
 3. 在前端加载索引并调用 `search()` 方法进行查询。
 
 ---
+
+## 文档站迁移
+
+- [Folio 文档迁移记录](./folio-migration/)
