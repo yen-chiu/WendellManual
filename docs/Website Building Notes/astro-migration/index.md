@@ -41,3 +41,5 @@ nav_order: 8
 - [手机界面信息密度与图谱交互优化](./mobile-ui-density)
 
 - [项目页作品展示与补充链接](./projects-portfolio)
+
+- [搜索面板与首页弹簧动效](./search-and-home-motion)
