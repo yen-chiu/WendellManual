@@ -45,3 +45,7 @@ nav_order: 8
 - [搜索面板与首页弹簧动效](./search-and-home-motion)
 
 - [文档站红叉与站内链接修复](./manual-ci-links)
+
+- [导航收敛、精选导读与分类整理](./navigation-reading-taxonomy)
+
+- [后续整改：整站设计与交互统一验收](./design-consistency-roadmap)
