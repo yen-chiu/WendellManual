@@ -25,4 +25,11 @@ nav_order: 19
 
 ## 发布结果
 
-待本次提交的全部检查完成后补记。
+修复提交 [2afdee3](https://github.com/yen-chiu/WendellManual/commit/2afdee3d7f05e1c009b4e27288bf2651a4465ecd) 已推送并核对远端SHA。
+
+- [CI 44276712399](https://github.com/yen-chiu/WendellManual/actions/runs/44276712399)：completed/success，Jekyll gem构建、CSS/JS检查及HTML校验全部通过。
+- [Pages 44276712424](https://github.com/yen-chiu/WendellManual/actions/runs/44276712424)：completed/success。
+- 本地生成96个HTML页面，独立检查10760条站内资源/链接及锚点引用，无缺失。报告 .work/manual-html-local-check.json；Windows html-proofer 本身未成功启动，真正的html-proofer验收由上述Linux CI完成。
+- 线上两篇记录的5个修正链接均已输出为正确相对地址，4个目标记录页面全部HTTP200。报告 .work/manual-ci-links-online.json。
+
+历史失败提交仍会保留红叉，这是当时的检查结果；新的修复提交已全绿。此前只核对Pages成功，遗漏了独立HTML校验，后续发布应同时检查部署和CI整体状态。
